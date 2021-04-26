@@ -1,0 +1,32 @@
+.mydiv {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 500px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 200px;
+  border: 1px solid red;
+}
+
+.mydiv1 {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  z-index: 1;
+  width: 100px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 50px;
+}
+
+.mydiv2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 100px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+/*# sourceMappingURL=common.css.map */

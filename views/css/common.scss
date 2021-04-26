@@ -1,0 +1,86 @@
+// float clear
+@mixin clear {
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+// 말줄임 ...
+@mixin ellipsis($w) {
+	overflow: hidden;
+	display: block;
+	width: $w;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+// 멀티라임 말줄임 ...
+@mixin ellipsis_multi($line , $w , $h) {
+	overflow: hidden;
+	display: -webkit-box;
+    -webkit-line-clamp: $line;
+	width: $w;
+    height:$h;
+    -webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+// div 가운데 배치
+@mixin box_center($w){
+	position: absolute;
+	left : 50%;
+	top : 50%;
+	width : $w;
+	transform: translate(-50%,-50%);
+}
+
+// 예제
+.mydiv {
+	@include box_center(500px); height:200px; border:1px solid red;
+}
+
+
+@mixin position($x,$y,$z,$w) {
+	position: absolute;
+	left:$x;
+	top:$y;
+	z-index: $z;
+	width:$w;
+
+	@if $x == 50% and $y == 50%{
+		transform: translate(-50%,-50%);
+	}@else if $x == 50%{
+		transform: translateX(-50%);
+	}@else if $y == 50%{
+		transform: translateY(-50%);
+	}
+}
+// 예제
+.mydiv1{
+	@include position(50%,0,1,100px); height: 50px;
+}
+.mydiv2{
+	@include position(50%,50%,1,100px);
+}
+
+// 좀더 밝게
+// $lighten($color,30%)
+// 좀더 어둡게
+// $darken($color,30%)
+// opacify
+// 채도 증가
+// saturate 
+// 채도 감수
+// desaturate
+
+
+
+
+
+// // 좀더 진하게 좀더 연하게
+// 
+
+

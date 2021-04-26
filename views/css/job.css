@@ -1,0 +1,556 @@
+@font-face {
+  font-family: "Jal_Onuel";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Jal_Onuel.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'KyoboHand';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@-webkit-keyframes moveRight {
+  0% {
+    margin-left: 25%;
+  }
+  20% {
+    margin-left: 50%;
+    -webkit-transform-origin: 0%;
+            transform-origin: 0%;
+  }
+  100% {
+    margin-left: 50%;
+    -webkit-transform-origin: 0%;
+            transform-origin: 0%;
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    margin-left: 25%;
+  }
+  20% {
+    margin-left: 50%;
+    -webkit-transform-origin: 0%;
+            transform-origin: 0%;
+  }
+  100% {
+    margin-left: 50%;
+    -webkit-transform-origin: 0%;
+            transform-origin: 0%;
+  }
+}
+
+@-webkit-keyframes open {
+  0% {
+  }
+  100% {
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+  }
+}
+
+@keyframes open {
+  0% {
+  }
+  100% {
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+  }
+}
+
+@-webkit-keyframes open2 {
+  0% {
+  }
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+}
+
+@keyframes open2 {
+  0% {
+  }
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+}
+
+.jobWorldContainer {
+  margin-top: 30px;
+}
+
+.jobWorldContainer .jobWorld {
+  position: relative;
+  margin-top: 20px;
+  width: 1000px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap {
+  position: relative;
+  height: 100%;
+  width: 50%;
+  margin-left: 25%;
+  z-index: 1;
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap .coverBox {
+  width: 100%;
+  height: 100%;
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap .coverBox .pageWorld {
+  width: 100%;
+  height: 100%;
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap .coverBox .pageWorld .pagewrap {
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
+  position: absolute;
+  z-index: 2;
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap .coverBox .pageWorld .pagewrap .pageBox {
+  width: 100%;
+  height: 100%;
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap .coverBox .pageWorld .pagewrap .pageBox .page {
+  height: 100%;
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap .coverBox .pageWorld .pagewrap .pageBox .page .frontPage {
+  width: 100%;
+  height: 100%;
+  right: 0;
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap .coverBox .pageWorld .pagewrap .pageBox .page .frontPage .cover {
+  background: url("../images/bg.jpg");
+  /* border: 1px solid black; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap .coverBox .pageWorld .pagewrap .pageBox .page .frontPage .title {
+  position: absolute;
+  top: 30px;
+  left: 100px;
+  font-family: "Jal_Onuel";
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap .coverBox .pageWorld .pagewrap .pageBox .page .frontPage .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, right top, color-stop(2%, rgba(247, 254, 255, 0.5)), color-stop(3%, rgba(0, 0, 0, 0.5)), color-stop(3.2%, rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.2)));
+  background: linear-gradient(90deg, rgba(247, 254, 255, 0.5) 2%, rgba(0, 0, 0, 0.5) 3%, rgba(255, 255, 255, 0.5) 3.2%, rgba(255, 255, 255, 0.2) 100%);
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap .coverBox .pageWorld .borderPage {
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap .coverBox .pageWorld .borderPage .coverLeft {
+  right: -19px;
+  top: 7px;
+  width: 20px;
+  height: 495px;
+  position: absolute;
+  background: -webkit-gradient(linear, left top, right top, from(#1e1e1e), color-stop(1%, #1e1e1e), color-stop(10%, #e6e6e6), color-stop(90%, #e6e6e6), to(#080808));
+  background: linear-gradient(90deg, #1e1e1e 0%, #1e1e1e 1%, #e6e6e6 10%, #e6e6e6 90%, #080808 100%);
+  -webkit-transform: skewY(40deg);
+          transform: skewY(40deg);
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap .coverBox .pageWorld .borderPage .coverLeftBottom {
+  left: 10px;
+  top: 495px;
+  width: 100%;
+  height: 15px;
+  position: absolute;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1e1e1e), color-stop(1%, #1e1e1e), color-stop(10%, #b4b4b4), color-stop(90%, #e6e6e6), to(#080808));
+  background: linear-gradient(#1e1e1e 0%, #1e1e1e 1%, #b4b4b4 10%, #e6e6e6 90%, #080808 100%);
+  -webkit-transform: skewX(50deg);
+          transform: skewX(50deg);
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap .coverBox .pageWorld .backPage {
+  background: gray;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap .coverBox .borderPage .coverRight {
+  right: -19px;
+  top: 7px;
+  width: 20px;
+  height: 495px;
+  position: absolute;
+  background: -webkit-gradient(linear, left top, right top, from(#1e1e1e), color-stop(1%, #1e1e1e), color-stop(10%, #e6e6e6), color-stop(90%, #e6e6e6), to(#080808));
+  background: linear-gradient(90deg, #1e1e1e 0%, #1e1e1e 1%, #e6e6e6 10%, #e6e6e6 90%, #080808 100%);
+  -webkit-transform: skewY(40deg);
+          transform: skewY(40deg);
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap .coverBox .borderPage .coverRightBottom {
+  left: 10px;
+  top: 495px;
+  width: 100%;
+  height: 15px;
+  position: absolute;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1e1e1e), color-stop(1%, #1e1e1e), color-stop(10%, #b4b4b4), color-stop(90%, #e6e6e6), to(#080808));
+  background: linear-gradient(#1e1e1e 0%, #1e1e1e 1%, #b4b4b4 10%, #e6e6e6 90%, #080808 100%);
+  -webkit-transform: skewX(50deg);
+          transform: skewX(50deg);
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap .coverBox .postit .profile {
+  width: 100px;
+  height: 40px;
+  background-color: #7fffd4;
+  position: absolute;
+  right: -102px;
+  top: 30px;
+  text-align: center;
+  line-height: 32px;
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap .coverBox .postit .profile span.text {
+  font-size: 12px;
+  font-family: "Jal_Onuel";
+  font-weight: 200;
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap .coverBox .postit .profile span.handbar {
+  right: 0;
+  display: inline-block;
+  width: 10px;
+  height: 100%;
+  background-color: #46726d;
+  opacity: 0.3;
+  position: absolute;
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap .coverBox .postit .profile::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#505050), color-stop(0.5%, white), color-stop(3.2%, rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.2)));
+  background: linear-gradient(90deg, #505050 0%, white 0.5%, rgba(255, 255, 255, 0.5) 3.2%, rgba(255, 255, 255, 0.2) 100%);
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap .coverBox .postit .thankyou {
+  width: 97px;
+  height: 40px;
+  background-color: #ffd30d;
+  position: absolute;
+  right: -102px;
+  top: 75px;
+  text-align: center;
+  line-height: 32px;
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap .coverBox .postit .thankyou span.text {
+  font-size: 12px;
+  font-family: "Jal_Onuel";
+  font-weight: 200;
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap .coverBox .postit .thankyou span.handbar {
+  right: 0;
+  display: inline-block;
+  width: 10px;
+  height: 100%;
+  background-color: #312903;
+  opacity: 0.3;
+  position: absolute;
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap .coverBox .postit .thankyou::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#505050), color-stop(0.5%, white), color-stop(3.2%, rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.2)));
+  background: linear-gradient(90deg, #505050 0%, white 0.5%, rgba(255, 255, 255, 0.5) 3.2%, rgba(255, 255, 255, 0.2) 100%);
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap .coverBox .postit .todo {
+  width: 94px;
+  height: 40px;
+  background-color: #9acd32;
+  position: absolute;
+  right: -102px;
+  top: 120px;
+  text-align: center;
+  line-height: 32px;
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap .coverBox .postit .todo span.text {
+  font-size: 12px;
+  font-family: "Jal_Onuel";
+  font-weight: 200;
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap .coverBox .postit .todo span.handbar {
+  right: 0;
+  display: inline-block;
+  width: 10px;
+  height: 100%;
+  background-color: #425815;
+  opacity: 0.3;
+  position: absolute;
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap .coverBox .postit .todo::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#505050), color-stop(0.5%, white), color-stop(3.2%, rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.2)));
+  background: linear-gradient(90deg, #505050 0%, white 0.5%, rgba(255, 255, 255, 0.5) 3.2%, rgba(255, 255, 255, 0.2) 100%);
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap .coverBox .postit .memo {
+  width: 90px;
+  height: 40px;
+  background-color: #c0553f;
+  position: absolute;
+  right: -102px;
+  top: 165px;
+  text-align: center;
+  line-height: 32px;
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap .coverBox .postit .memo span.text {
+  font-size: 12px;
+  font-family: "Jal_Onuel";
+  font-weight: 200;
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap .coverBox .postit .memo span.handbar {
+  right: 0;
+  display: inline-block;
+  width: 10px;
+  height: 100%;
+  background-color: #58261c;
+  opacity: 0.3;
+  position: absolute;
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap .coverBox .postit .memo::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#505050), color-stop(0.5%, white), color-stop(3.2%, rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.2)));
+  background: linear-gradient(90deg, #505050 0%, white 0.5%, rgba(255, 255, 255, 0.5) 3.2%, rgba(255, 255, 255, 0.2) 100%);
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap.open {
+  -webkit-animation: moveRight 0s linear 0s 1 forwards alternate;
+          animation: moveRight 0s linear 0s 1 forwards alternate;
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap.open .coverBox .pageWorld .pagewrap {
+  -webkit-animation: open 0s linear 0s 1 forwards alternate;
+          animation: open 0s linear 0s 1 forwards alternate;
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap.open .coverBox .pageWorld .borderPage {
+  -webkit-animation: open 0s linear 0s 1 forwards alternate;
+          animation: open 0s linear 0s 1 forwards alternate;
+}
+
+.jobWorldContainer .jobWorld .coverBoxWrap.open .coverBox .pageWorld .backPage {
+  -webkit-animation: open 0s linear 0s 1 forwards alternate;
+          animation: open 0s linear 0s 1 forwards alternate;
+}
+
+.jobWorldContainer .jobWorld .contentBoxWrap {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.jobWorldContainer .jobWorld .contentBoxWrap .contentPageWrap {
+  width: 100%;
+  height: 100%;
+}
+
+.jobWorldContainer .jobWorld .contentBoxWrap .contentPageWrap .pageBox {
+  width: 100%;
+  height: 100%;
+}
+
+.jobWorldContainer .jobWorld .contentBoxWrap .contentPageWrap .pageBox .page {
+  width: 100%;
+  height: 100%;
+}
+
+.jobWorldContainer .jobWorld .contentBoxWrap .contentPageWrap .pageBox .page .leftPage {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.jobWorldContainer .jobWorld .contentBoxWrap .contentPageWrap .pageBox .page .rightPage {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 50%;
+  top: 0;
+}
+
+.jobWorldContainer .jobWorld .contentBoxWrap .contentBox {
+  width: 100%;
+  height: 100%;
+}
+
+.jobWorldContainer .jobWorld .contentBoxWrap .contentBox .content_left {
+  position: absolute;
+  left: 1%;
+  width: 48%;
+  top: 1%;
+  height: 98%;
+  background: white;
+  text-align: center;
+  z-index: 3;
+}
+
+.jobWorldContainer .jobWorld .contentBoxWrap .contentBox .content_right {
+  position: absolute;
+  width: 48%;
+  left: 51%;
+  top: 1%;
+  height: 98%;
+  text-align: center;
+  background: white;
+  z-index: 3;
+}
+
+.jobWorldContainer .jobWorld .contentBoxWrap .contentBox .content_right .canvas_menu {
+  background: #ffd30d;
+}
+
+.jobWorldContainer .jobWorld .contentBoxWrap .contentBox .content_right .canvas_menu .closeBtn {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+}
+
+.jobWorldContainer .jobWorld .contentBoxWrap .contentBox .content_right .canvas_menu h2 {
+  padding: 5px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.jobWorldContainer .jobWorld .contentBoxWrap .contentBox .content_right .canvas_menu .menu_button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  z-index: 10;
+  padding: 5px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #ffd30d;
+}
+
+.jobWorldContainer .jobWorld .contentBoxWrap .contentBox .content_right .canvas_menu .menu_button .text {
+  margin-top: 10px;
+}
+
+.jobWorldContainer .jobWorld .contentBoxWrap .contentBox .content_right .write_input_div {
+  position: absolute;
+  width: 200px;
+}
+
+.jobWorldContainer .jobWorld .contentBoxWrap .contentBox .content_right .write_input_div .title {
+  position: absolute;
+  left: 0px;
+  top: -60px;
+  width: 200px;
+  background-color: darkgray;
+}
+
+.jobWorldContainer .jobWorld .contentBoxWrap .contentBox .content_right .write_input_div .closeBtn {
+  position: absolute;
+  right: -20px;
+  top: -20px;
+  z-index: 11;
+}
+
+.jobWorldContainer .jobWorld .contentBoxWrap .contentBox .content_right .write_input_div .write_input_option {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 10px;
+  margin-right: 10px;
+  top: -40px;
+  left: 0px;
+}
+
+.jobWorldContainer .jobWorld .contentBoxWrap .contentBox .content_right .write_input_div .borderBox {
+  position: absolute;
+  z-index: 10;
+  left: -5px;
+  top: -65px;
+  width: 210px;
+  height: 100px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid black;
+}
+
+.jobWorldContainer .jobWorld .contentBoxWrap .contentBox .content_right .write_input_div .write_input {
+  height: 25px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 11;
+  border: 0;
+  color: transparent;
+}
+/*# sourceMappingURL=job.css.map */

@@ -1,0 +1,282 @@
+@font-face {
+    font-family: 'CookieRun-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+//  변수선언
+//  메인색상.
+$mainColor:#FFD30D;
+//  서브색상
+$subColor:#FFD30D;
+$tes: #c9c9c9;
+// 기본색상.
+$gray: #333;
+$white: #fff;
+// 폰트사이즈
+$fsBig:1.5rem;
+$fsMidium: 1.1rem;
+$fsSmall:0.9rem;
+// 패eld사이즈
+$p3: 10px;
+$p2: 10px;
+$p1: 10px;
+html,
+body {
+    margin: 0;
+    // background: url(./images/bg.jpg);
+    // background-size: cover;
+}
+
+.gap {
+    height: 10px;
+}
+
+@keyframes loginPopup {
+    0% {
+        transform: translateY(300px);
+        display: none;
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes loginClose {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(300px);
+        opacity: 0;
+    }
+}
+
+@keyframes opacityZero {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.topBar {
+    // background-color: white;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+        margin-left: 20px;
+        font-size: 2rem;
+        font-family: 'CookieRun-Regular';
+    }
+
+    .loginToggleDiv{
+        .loginButton {
+            .button {
+                margin-right: 20px;
+                a {
+                    text-decoration: none;
+                    span {
+                        border: 0;
+                        font-size: 1.5rem;
+                        border-radius: 50px;
+                        padding: 5px 20px;
+                        margin: 0;
+                        align-items: initial;
+                        background-color: $mainColor;
+                        &:hover {
+                            color: $mainColor;
+                            background-color: $gray;
+                        }
+                    }
+                }
+            }
+        }
+        .myInfo {
+            display: none;
+            .button {
+                margin-right: 20px;
+                a {
+                    text-decoration: none;
+                    span {
+                        border: 0;
+                        font-size: 1.5rem;
+                        border-radius: 50px;
+                        padding: 5px 20px;
+                        margin: 0;
+                        align-items: initial;
+                        background-color: $mainColor;
+                        &:hover {
+                            color: $mainColor;
+                            background-color: $gray;
+                        }
+                    }
+                }
+            }            
+        }
+        .logined {
+            display: block;
+        }
+    }
+
+    
+}
+
+.loginWorld {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    &.on {
+        display: block;
+        opacity: 1;
+        z-index: 10;
+        .loginBox {
+            animation: 0.3s ease-in-out 0s 1 forwards running loginPopup;
+        }
+    }
+    &.off {
+        display: block;
+        animation: 0.2s ease-in-out 0s 1 forwards running opacityZero;
+        opacity: 1;
+        z-index: -1;
+        .loginBox {
+            animation: 0.2s ease-in-out 0s 1 forwards running loginClose;
+        }
+    }
+    .loginBox {
+        border: 1px solid gray;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -300px;
+        margin-top: -240px;
+        width: 600px;
+        height: 480px;
+        display: flex;
+        /* justify-content: center; */
+        /* align-items: center; */
+        background-color: rgba(255, 255, 255, 1);
+        /* border-radius: 10px; */
+        .logo {
+            background-color: rgba(230, 230, 230, 1);
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 90%;
+            }
+            div {
+                margin-top: 10px;
+                .logo_text {
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    color: black;
+                }
+            }
+        }
+        .login {
+            width: 400px;
+            .close {
+                text-align: right;
+                margin-right: 10px;
+                margin-top: 10px;
+                img {
+                    width: 15px;
+                }
+            }
+            .loginInnerBoxWrapper {
+                height: 90%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .loginInnerBox {
+                    H2 {
+                        margin: 20px 0;
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                        width: 330px;
+                        // margin: auto auto;
+                        margin-left: 25px;
+                    }
+                    padding: 10px;
+                    .loginForm {
+                        display: flex;
+                        position: relative;
+                        justify-content: center;
+                        input[name=email] {
+                            padding: 0 10px;
+                            height: 40px;
+                            width: 250px;
+                            box-sizing: border-box;
+                        }
+                        button {
+                            color: white;
+                            width: 80px;
+                            background-color: $mainColor;
+                            height: 40px;
+                            box-sizing: border-box;
+                            font-weight: bold;
+                            border: none;
+                            &:hover {}
+                        }
+                        &.readOnly:after{
+                            content : '이메일이 발송준비중입니다.';
+                            color : white;
+                            position: absolute;
+                            top:0;
+                            left:0;
+                            width:100%;height:100%;
+                            background-color: cadetblue;
+                            line-height: 40px;
+                            text-align: center;
+                        }
+                        &.readOnly2:after{
+                            content : '이메일이 발송되었습니다.';
+                            color : white;
+                            position: absolute;
+                            top:0;
+                            left:0;
+                            width:100%;height:100%;
+                            background-color: cadetblue;
+                            line-height: 40px;
+                            text-align: center;
+                        }                        
+                    }
+                    .snsLogin {
+                        width: 330px;
+                        margin-left: 25px;
+                    }
+                    .snsLogin img {
+                        width: 50px;
+                    }
+                }
+                .join {
+                    bottom: 0;
+                    text-align: right;
+                    margin-right: 10px;
+                    a {
+                        font-size: 1.1rem;
+                        font-weight: bolder;
+                        color: $mainColor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+

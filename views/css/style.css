@@ -1,0 +1,368 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'CookieRun-Regular';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+.gap {
+  height: 10px;
+}
+
+@-webkit-keyframes loginPopup {
+  0% {
+    -webkit-transform: translateY(300px);
+            transform: translateY(300px);
+    display: none;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    display: block;
+    opacity: 1;
+  }
+}
+
+@keyframes loginPopup {
+  0% {
+    -webkit-transform: translateY(300px);
+            transform: translateY(300px);
+    display: none;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    display: block;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes loginClose {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(300px);
+            transform: translateY(300px);
+    opacity: 0;
+  }
+}
+
+@keyframes loginClose {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(300px);
+            transform: translateY(300px);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes opacityZero {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes opacityZero {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.topBar {
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.topBar .logo {
+  margin-left: 20px;
+  font-size: 2rem;
+  font-family: 'CookieRun-Regular';
+}
+
+.topBar .loginToggleDiv .loginButton .button {
+  margin-right: 20px;
+}
+
+.topBar .loginToggleDiv .loginButton .button a {
+  text-decoration: none;
+}
+
+.topBar .loginToggleDiv .loginButton .button a span {
+  border: 0;
+  font-size: 1.5rem;
+  border-radius: 50px;
+  padding: 5px 20px;
+  margin: 0;
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
+  background-color: #FFD30D;
+}
+
+.topBar .loginToggleDiv .loginButton .button a span:hover {
+  color: #FFD30D;
+  background-color: #333;
+}
+
+.topBar .loginToggleDiv .myInfo {
+  display: none;
+}
+
+.topBar .loginToggleDiv .myInfo .button {
+  margin-right: 20px;
+}
+
+.topBar .loginToggleDiv .myInfo .button a {
+  text-decoration: none;
+}
+
+.topBar .loginToggleDiv .myInfo .button a span {
+  border: 0;
+  font-size: 1.5rem;
+  border-radius: 50px;
+  padding: 5px 20px;
+  margin: 0;
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
+  background-color: #FFD30D;
+}
+
+.topBar .loginToggleDiv .myInfo .button a span:hover {
+  color: #FFD30D;
+  background-color: #333;
+}
+
+.topBar .loginToggleDiv .logined {
+  display: block;
+}
+
+.loginWorld {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.loginWorld.on {
+  display: block;
+  opacity: 1;
+  z-index: 10;
+}
+
+.loginWorld.on .loginBox {
+  -webkit-animation: 0.3s ease-in-out 0s 1 forwards running loginPopup;
+          animation: 0.3s ease-in-out 0s 1 forwards running loginPopup;
+}
+
+.loginWorld.off {
+  display: block;
+  -webkit-animation: 0.2s ease-in-out 0s 1 forwards running opacityZero;
+          animation: 0.2s ease-in-out 0s 1 forwards running opacityZero;
+  opacity: 1;
+  z-index: -1;
+}
+
+.loginWorld.off .loginBox {
+  -webkit-animation: 0.2s ease-in-out 0s 1 forwards running loginClose;
+          animation: 0.2s ease-in-out 0s 1 forwards running loginClose;
+}
+
+.loginWorld .loginBox {
+  border: 1px solid gray;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -300px;
+  margin-top: -240px;
+  width: 600px;
+  height: 480px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  background-color: white;
+  /* border-radius: 10px; */
+}
+
+.loginWorld .loginBox .logo {
+  background-color: #e6e6e6;
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loginWorld .loginBox .logo img {
+  width: 90%;
+}
+
+.loginWorld .loginBox .logo div {
+  margin-top: 10px;
+}
+
+.loginWorld .loginBox .logo div .logo_text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+}
+
+.loginWorld .loginBox .login {
+  width: 400px;
+}
+
+.loginWorld .loginBox .login .close {
+  text-align: right;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.loginWorld .loginBox .login .close img {
+  width: 15px;
+}
+
+.loginWorld .loginBox .login .loginInnerBoxWrapper {
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.loginWorld .loginBox .login .loginInnerBoxWrapper .loginInnerBox {
+  padding: 10px;
+}
+
+.loginWorld .loginBox .login .loginInnerBoxWrapper .loginInnerBox H2 {
+  margin: 20px 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 330px;
+  margin-left: 25px;
+}
+
+.loginWorld .loginBox .login .loginInnerBoxWrapper .loginInnerBox .loginForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.loginWorld .loginBox .login .loginInnerBoxWrapper .loginInnerBox .loginForm input[name=email] {
+  padding: 0 10px;
+  height: 40px;
+  width: 250px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.loginWorld .loginBox .login .loginInnerBoxWrapper .loginInnerBox .loginForm button {
+  color: white;
+  width: 80px;
+  background-color: #FFD30D;
+  height: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: bold;
+  border: none;
+}
+
+.loginWorld .loginBox .login .loginInnerBoxWrapper .loginInnerBox .loginForm.readOnly:after {
+  content: '이메일이 발송준비중입니다.';
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: cadetblue;
+  line-height: 40px;
+  text-align: center;
+}
+
+.loginWorld .loginBox .login .loginInnerBoxWrapper .loginInnerBox .loginForm.readOnly2:after {
+  content: '이메일이 발송되었습니다.';
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: cadetblue;
+  line-height: 40px;
+  text-align: center;
+}
+
+.loginWorld .loginBox .login .loginInnerBoxWrapper .loginInnerBox .snsLogin {
+  width: 330px;
+  margin-left: 25px;
+}
+
+.loginWorld .loginBox .login .loginInnerBoxWrapper .loginInnerBox .snsLogin img {
+  width: 50px;
+}
+
+.loginWorld .loginBox .login .loginInnerBoxWrapper .join {
+  bottom: 0;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.loginWorld .loginBox .login .loginInnerBoxWrapper .join a {
+  font-size: 1.1rem;
+  font-weight: bolder;
+  color: #FFD30D;
+}
+/*# sourceMappingURL=style.css.map */

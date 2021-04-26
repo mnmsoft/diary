@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+		<link rel="stylesheet" href="./css/style.css" media="screen and (min-width:769px)" />
+		<link rel="stylesheet" href="./css/job.css" media="screen and (min-width:769px)" />
+		<link rel="stylesheet" href="./css/mobile.css" media="screen and (max-width:768px)" />
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+	</head>
+
+	<body>
+		<!-- 이메일 로그인. 구글 로그인. 카카오톡 로그인. 페이스북 로그인. 네이버 로그인. 깃허브 로그인. -->
+		<div class="loginWorld">
+			<div class="loginBox">
+				<div class="logo">
+					<img src="./images/tutorial_chick.png" alt="mnmsoft icon" />
+					<div>
+						<span class="logo_text">어서오세요</span>
+					</div>
+				</div>
+				<div class="login">
+					<div class="close" onclick="closeLoginPopup();">
+						<img src="./images/cancel.svg" alt="닫기" />
+					</div>
+					<div class="loginInnerBoxWrapper">
+						<div class="loginInnerBox">
+							<h2>로그인</h2>
+
+							<div class="loginForm">
+								<input type="text" name="email" value="" placeholder="이메일주소를 입력해주세요" />
+								<button onclick="loginCall();">로그인</button>
+							</div>
+							<div class="gap"></div>
+							<div class="gap"></div>
+							<div class="gap"></div>
+							<h2>소셜 로그인</h2>
+							<div class="snsLogin">
+								<img src="./images/Share_faceBook.png" alt="페이스북 로그인" />
+								<img src="./images/Share_faceBook.png" alt="네이버 로그인" />
+								<img src="./images/Share_talk.png" alt="카카오톡 로그인" />
+								<img src="./images/Share_faceBook.png" alt="구글 로그인" />
+								<img src="./images/Share_faceBook.png" alt="깃허브 로그인" />
+							</div>
+						</div>
+						<div class="join">
+							<span>아직 회원이 아니신가요? <a href="#">회원가입</a></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="topBar">
+			<div class="logo">mnmsoft</div>
+			<div class="loginToggleDiv">
+				<div class="loginButton">
+					<div class="button">
+						<a href="#" onclick="openLoginPopup();"><span>로그인</span></a>
+					</div>
+				</div>
+				<div class="myInfo">
+					<div class="button">
+						<a href="#" onclick="logout();"><span>로그아웃</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="jobWorldContainer">
+			<div class="jobWorld">
+				<div class="coverBoxWrap">
+					<!-- class open toggle -->
+					<div class="coverBox">
+						<div class="pageWorld">
+							<div class="pagewrap">
+								<div class="pageBox">
+									<div class="page">
+										<div class="frontPage">
+											<div class="cover"></div>
+											<div class="title">2021 당신의 다이어리</div>
+											<div class="overlay"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+                            <div class="borderPage">
+                                <div class="coverLeft"></div>
+                                <div class="coverLeftBottom"></div>
+                            </div>                            
+                            <div class="backPage"></div>
+						</div>
+						<div class="borderPage">
+							<div class="coverRight"></div>
+							<div class="coverRightBottom"></div>
+						</div>
+						<div class="postit">
+							<div class="profile">
+								<span class="text">PROFILE</span>
+								<span class="handbar"></span>
+							</div>
+                            <div class="thankyou">
+								<span class="text">감사일기</span>
+								<span class="handbar"></span>
+							</div>
+							<div class="todo">
+								<span class="text">해야할 일</span>
+								<span class="handbar"></span>
+							</div>
+							<div class="memo">
+								<span class="text">메모</span>
+								<span class="handbar"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+                <div class="contentBoxWrap">
+                    <div class="contentPageWrap">
+                        <div class="pageBox">
+                            <div class="page">
+                                <div class="leftPage">
+                                </div>
+                                <div class="rightPage">
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="contentBox">
+                        <div class="content_left">1</div>
+                        <div class="content_right">2</div>
+                    </div>
+                </div>
+			</div>
+		</div>
+		<script src="./js/common.js"></script>
+		<script src="./js/job.js"></script>
+	</body>
+</html>
